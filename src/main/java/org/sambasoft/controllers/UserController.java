@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins="https://frontendppp.herokuapp.com", allowedHeaders="*")
+@CrossOrigin(origins="http://localhost:4200", allowedHeaders="*")
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
