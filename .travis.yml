@@ -10,9 +10,10 @@ script:
  - ./mvnw clean install -B
 after_success:
  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+ - export IMAGE_NAME=bochwafa/backendspringboot
  - docker build -t $IMAGE_NAME .
- - docker tag image $DOCKER_USER/$IMAGE_NAME:$TAG
- - docker push $DOCKER_USER/$IMAGE_NAME:$TAG
+ - docker tag $IMAGE_NAME $IMAGE_NAME:$TAG
+ - docker push $IMAGE_NAME
 deploy:
  provider: heroku
  api-key: 
