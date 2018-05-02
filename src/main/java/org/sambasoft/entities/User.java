@@ -9,33 +9,33 @@ public class User {
 	@Id
 	@GeneratedValue
     private Long id;
-    private String fname;
-    private String lname;
+    private String username;
+    private String lastname;
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getFname() {
-		return fname;
+	public String getUsername() {
+		return username;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public String getLname() {
-		return lname;
+	public String getLastname() {
+		return lastname;
 	}
-	public void setLname(String lname) {
-		this.lname = lname;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
-	public User(String fname, String lname) {
-		this.fname = fname;
-		this.lname = lname;
+	public User(String username, String lastname) {
+		this.username = username;
+		this.lastname = lastname;
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", fname=" + fname + ", lname=" + lname + "]";
+		return "User [id=" + id + ", username=" + username + ", lastname=" + lastname + "]";
 	}
 	public User() {
 	}
