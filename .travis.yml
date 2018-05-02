@@ -8,6 +8,8 @@ before_install:
  - chmod +x mvnw
 script:
  - ./mvnw clean install -B
+ after_success:
+ - docker login -u $DOCKER_USER -p $DOCKER_PASS
 deploy:
  provider: heroku
  api-key: 
